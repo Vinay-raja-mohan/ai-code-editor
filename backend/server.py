@@ -218,6 +218,7 @@ async def execute_code(request: CodeExecuteRequest):
                 os.unlink(temp_file)
         
         else:
+            execution_time = time.time() - start_time
             raise HTTPException(status_code=400, detail="Unsupported language")
     
     except subprocess.TimeoutExpired:
