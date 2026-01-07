@@ -1,0 +1,170 @@
+{
+  "identity": {
+    "name": "E1",
+    "role": "Anti-AI Designer",
+    "principles": [
+      "Fusion over Imitation",
+      "Emotion First",
+      "Content is king",
+      "Zoom in",
+      "Negative Space",
+      "Contrast"
+    ],
+    "anti_patterns": [
+      "Purple/Teal for CTA",
+      "Inter everywhere",
+      "Center-Everything Disease",
+      "Gradient Overload"
+    ]
+  },
+  "context": {
+    "app_type": "Developer IDE / Coding Environment",
+    "theme": "Dark Mode (Default)",
+    "emotional_archetype": "Electric & Neon (Future, Speed, Disruption)",
+    "target_audience": "Developers, students, coding enthusiasts"
+  },
+  "typography": {
+    "fonts": {
+      "headings": "JetBrains Mono, monospace",
+      "body": "Inter, sans-serif",
+      "code": "Fira Code, monospace"
+    },
+    "rules": [
+      "Use 'JetBrains Mono' for all headings and major UI labels to enforce the 'Developer Tool' aesthetic.",
+      "Use 'Inter' for long-form text, documentation, and chat messages for readability.",
+      "Use 'Fira Code' strictly for the code editor and code snippets.",
+      "Headings > 32px must use 'tracking-tight'.",
+      "Overlines/Labels must be Uppercase + Tiny + Wide Spacing ('tracking-[0.2em]')."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "base": {
+        "light": "#ffffff",
+        "dark": "#09090b"
+      },
+      "surface": {
+        "light": "#f4f4f5",
+        "dark": "#18181b"
+      },
+      "primary": {
+        "default": "#8b5cf6",
+        "foreground": "#ffffff"
+      },
+      "secondary": {
+        "default": "#27272a",
+        "foreground": "#fafafa"
+      },
+      "accent": {
+        "default": "#10b981",
+        "foreground": "#ffffff"
+      },
+      "destructive": {
+        "default": "#ef4444",
+        "foreground": "#ffffff"
+      },
+      "muted": {
+        "default": "#27272a",
+        "foreground": "#a1a1aa"
+      },
+      "border": {
+        "light": "#e4e4e7",
+        "dark": "#27272a"
+      }
+    },
+    "rules": [
+      "Primary color (#8b5cf6 - Violet) is reserved for AI interactions and primary CTAs.",
+      "Accent color (#10b981 - Emerald) is used for 'Run Code', 'Success', and 'Online' states.",
+      "Destructive color (#ef4444 - Red) is used for 'Stop Execution', 'Delete', and 'Errors'.",
+      "Backgrounds must be deep zinc/black (#09090b), NOT pure black (#000000).",
+      "Borders should be subtle (#27272a) to define structure without clutter."
+    ]
+  },
+  "layout": {
+    "grid_system": "The 'Control Room' Grid",
+    "spacing": {
+      "base": "Generous spacing (p-6, p-8) for containers.",
+      "dense": "Tight spacing (p-2, gap-2) for toolbars and file trees."
+    },
+    "structure": [
+      "Main Layout: Split-pane architecture (Sidebar | Editor | Chat | Terminal).",
+      "Sidebar: Collapsible, width 64px (icon only) to 250px (expanded).",
+      "Editor: Central focus, takes remaining width.",
+      "Chat Panel: Right side, collapsible, width 300px-400px.",
+      "Terminal: Bottom, collapsible, height 200px-300px."
+    ]
+  },
+  "components": {
+    "library": "Shadcn/UI",
+    "custom_components": [
+      {
+        "name": "CodeEditor",
+        "description": "Wrapper around Monaco Editor or CodeMirror. Must support syntax highlighting and line numbers.",
+        "style": "Border-less within its pane, 100% height/width."
+      },
+      {
+        "name": "TerminalPanel",
+        "description": "Output display with monospace font. Supports ANSI color codes.",
+        "style": "Darker background (#000000 or #121212), distinct from editor."
+      },
+      {
+        "name": "AIChatInterface",
+        "description": "Chat bubble interface. User messages right aligned, AI messages left aligned.",
+        "style": "Glassmorphism header, clean input area at bottom."
+      }
+    ],
+    "styling_rules": [
+      "Buttons: Sharp edges or small radius (rounded-md). No pill shapes for toolbars.",
+      "Inputs: Minimalist, 'border-b' only or subtle outline.",
+      "Cards: Flat background, 1px subtle border, no shadow by default. Hover: Slight lift."
+    ]
+  },
+  "assets": {
+    "icons": "Lucide React (default), Phosphor Icons (for specific tech icons)",
+    "images": [
+      {
+        "category": "background",
+        "url": "https://images.pexels.com/photos/8849295/pexels-photo-8849295.jpeg",
+        "description": "Abstract AI Network Dark Background for Login/Landing"
+      },
+      {
+        "category": "background_secondary",
+        "url": "https://images.pexels.com/photos/18068747/pexels-photo-18068747.png",
+        "description": "Subtle dark texture for modal backdrops"
+      },
+      {
+        "category": "hero",
+        "url": "https://images.pexels.com/photos/6330644/pexels-photo-6330644.jpeg",
+        "description": "Cyberpunk coding setup for Hero section"
+      }
+    ]
+  },
+  "motion": {
+    "transitions": "transition-all duration-200 ease-in-out",
+    "animations": [
+      "Fade in for new chat messages.",
+      "Slide in for side panels.",
+      "Pulse effect for 'AI Thinking' state."
+    ]
+  },
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: 'transition: all'. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add '.App { text-align: center; }' in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN.",
+    "Prioritize using pre-existing components from src/components/ui when applicable.",
+    "Create new components that match the style and conventions of existing components when needed.",
+    "Examine existing components to understand the project's component patterns before creating new ones.",
+    "Components MUST use named exports (export const ComponentName = ...).",
+    "Pages MUST use default exports (export default function PageName() {...}).",
+    "Use 'sonner' for toasts. Sonner component are located in '/app/src/components/ui/sonner.tsx'."
+  ]
+}
