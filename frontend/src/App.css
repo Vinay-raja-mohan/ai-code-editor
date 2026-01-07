@@ -91,3 +91,12 @@
     opacity: 0.5;
   }
 }
+
+/* Fix toast overlay issue */
+[data-sonner-toaster] {
+  pointer-events: none !important;
+}
+
+[data-sonner-toast] {
+  pointer-events: auto !important;
+}
