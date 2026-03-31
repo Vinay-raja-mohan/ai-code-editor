@@ -128,6 +128,7 @@ h1 {
     if (activeFile?.language) {
       setLanguage(activeFile.language);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeFileId]);
 
   useEffect(() => {
@@ -138,6 +139,7 @@ h1 {
     ) {
       openWebPreview();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [files]);
 
 
